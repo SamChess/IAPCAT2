@@ -28,7 +28,7 @@ class StudentsController extends Controller
 
 		DB::table('students')->insert($data);
 
-		 echo "Student Registered successfully.<br/>";
-		// return redirect('/');
+		 // echo "Student Registered successfully.<br/>";
+		return redirect()->back()->with('message', 'The student has been Registered successfully!');
 	}
 }
