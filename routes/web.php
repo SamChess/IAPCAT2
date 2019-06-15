@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/register', 'StudentsController@register');
+
+// Route::get('/register', function () {
+//     return view('sam/register');
+// });
+
+Route::get('/fees', 'FeesController@payFees');
+
+// Route::get('/fees', function () {
+//     return view('sam/fees');
+// });
+
+Route::post('create','StudentsController@insert'); 
