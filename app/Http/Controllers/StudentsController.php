@@ -14,6 +14,13 @@ class StudentsController extends Controller
     }
     public function insert(Request $request){
 
+    	request()->validate([
+    		'full_name'=>'required',
+    		'dob'=>'required',
+    		'address'=>'required'
+    		
+    	]);
+
 		$full_name = $request->input('full_name');
 		$dob= $request->input('dob');
 		$address = $request->input('address');
@@ -21,6 +28,7 @@ class StudentsController extends Controller
 
 		DB::table('students')->insert($data);
 
-		echo "Record inserted successfully.<br/>";
+		 echo "Student Registered successfully.<br/>";
+		// return redirect('/');
 	}
 }
