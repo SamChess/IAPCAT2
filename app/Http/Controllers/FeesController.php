@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Fees;
 
 class FeesController extends Controller
 {
@@ -31,4 +32,16 @@ class FeesController extends Controller
 		// echo "Fees paid successfully.<br/>";
 		return redirect()->back()->with('message', 'Your Fees has been recorded successfully!');
 	}
+     public function index() {
+
+      $fees = fees::all()->toArray();
+
+
+      return view('sam.fees',compact('fees'));
+
+      }
+       
+
+  
+	
 }

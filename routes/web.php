@@ -30,3 +30,7 @@ Route::get('/fees', 'FeesController@payFees');
 Route::post('create','StudentsController@insert'); 
 
 Route::post('record','FeesController@insert'); 
+
+Route::get('/fees','FeesController@index');
+
+

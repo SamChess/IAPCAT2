@@ -31,4 +31,5 @@ class StudentsController extends Controller
 		 // echo "Student Registered successfully.<br/>";
 		return redirect()->back()->with('message', 'The student has been Registered successfully!');
 	}
+	
 }

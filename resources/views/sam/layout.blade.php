@@ -15,11 +15,17 @@
 </head>
 <body>
 	<div class="container">
-	    <ul>
-	    	<li><a href="/">Home</a></li>
-	        <li><a href="/register">Register</a></li>
-	        <li><a href="/fees">Fees</a></li>
-	    </ul>
+
+         <div class="topnav">
+
+	    	<a href="/">Home</a>
+	        <a href="/register">Register</a>
+	        <a href="/fees">Fees</a>
+
+            @yield('search')
+            
+        </div>
+
     </div>
 
     @yield('content')

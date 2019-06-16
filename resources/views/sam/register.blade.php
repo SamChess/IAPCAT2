@@ -33,8 +33,9 @@ Register
 			<button type="submit" class="btn btn-primary">Register</button>
 			<br>
 			<br>
-
+			
 			@if ($errors->any())
+			
 
 			<div class="alert alert-danger">
 				<strong>
