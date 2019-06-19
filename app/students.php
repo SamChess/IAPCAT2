@@ -6,11 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class students extends Model
 {
+	protected $fillable = ['full_name', 'dob', 'address'];
 
     public function fees()
     {
-
-    	protected $fillable = ['full_name', 'dob', 'address'];
 
         return $this->hasMany('App\fees');
     }

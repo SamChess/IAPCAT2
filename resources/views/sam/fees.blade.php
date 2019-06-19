@@ -8,7 +8,7 @@
 
 @section('search')
 
-<input type="text" placeholder="Search..">
+<!-- <input type="text" placeholder="Search.."> -->
 
 
 @endsection
@@ -47,8 +47,13 @@
 			@endif
 			<input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
 			<div class="form-group">
-				<label for="student_number">Student Number:</label>
-				<input type="text" class="form-control" id="student_number" placeholder="Enter Student Number" name="student_number">
+				<select class="form-control" id="student_number" name="student_number">
+                    @foreach ($students as $student)
+
+                        <option value="{{ $student->student_number }}">{{ $student->full_name}}</option>
+
+                    @endforeach
+                </select>
 			</div>
 			<div class="form-group">
 				<label for="payment_date">Date of Payment:</label>
@@ -63,23 +68,6 @@
 			<br>
 			
 		</form>
-
-		<table>
-         <tr>
-            <td>student_number</td>
-            <td>payment</td>
-            <td>amount</td>
-         </tr>
-         @foreach ($fees as $row)
-         <tr>
-            <td>{{ $row['student_number']}}</td>
-            <td>{{ $row['payment_date']}}</td>
-            <td>{{ $row['amount']}}</td>
-         </tr>
-         sum({{ $row['amount']}})
-         @endforeach
-      </table>
-
 
 	</div>
 

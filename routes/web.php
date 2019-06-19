@@ -27,10 +27,20 @@ Route::get('/fees', 'FeesController@payFees');
 //     return view('sam/fees');
 // });
 
+// Route::get('/paid', 'PaidController@paid');
+
+Route::get('/view', 'ViewController@view');
+
+
 Route::post('create','StudentsController@insert'); 
 
 Route::post('record','FeesController@insert'); 
 
 Route::get('/fees','FeesController@index');
+
+// Route::get('/paid','PaidController@total');
+
+Route::get('/paid','PaidController@index');
+
 
 

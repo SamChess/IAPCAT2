@@ -21,6 +21,8 @@
 	    	<a href="/">Home</a>
 	        <a href="/register">Register</a>
 	        <a href="/fees">Fees</a>
+            <a href="/paid">Total Paid</a>
+            <a href="/view">View Payment</a>
 
             @yield('search')
             

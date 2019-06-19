@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Fees;
+use App\Students;
 
 class FeesController extends Controller
 {
@@ -35,9 +36,10 @@ class FeesController extends Controller
      public function index() {
 
       $fees = fees::all()->toArray();
+      $students=students::all();
 
 
-      return view('sam.fees',compact('fees'));
+      return view('sam.fees',compact('fees','students'));
 
       }
        
