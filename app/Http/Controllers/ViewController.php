@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class ViewController extends Controller
 {
@@ -11,4 +12,5 @@ class ViewController extends Controller
     	  return view('sam/view');
 
     }
+   
 }

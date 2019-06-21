@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Input;
+use App\fees;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,17 +19,7 @@ Route::get('/', function () {
 
 Route::get('/register', 'StudentsController@register');
 
-// Route::get('/register', function () {
-//     return view('sam/register');
-// });
-
 Route::get('/fees', 'FeesController@payFees');
-
-// Route::get('/fees', function () {
-//     return view('sam/fees');
-// });
-
-// Route::get('/paid', 'PaidController@paid');
 
 Route::get('/view', 'ViewController@view');
 
@@ -38,9 +30,20 @@ Route::post('record','FeesController@insert');
 
 Route::get('/fees','FeesController@index');
 
-// Route::get('/paid','PaidController@total');
+ Route::get('/view/action','ViewController@action')->name('view.action');
 
 Route::get('/paid','PaidController@index');
 
+Route::post('/search',function(){
+    $q = Input::get ( 'q' );
+     $user = fees::where('student_number','LIKE','%'.$q.'%')->get();
+     if(count($user) > 0){
 
+        return view('sam.view')->withDetails($user)->withQuery ( $q );
+    }
+    else {
+
+    	return view ('sam.view')->withMessage('No Details found. Try to search again !');
+    }
+});
 
