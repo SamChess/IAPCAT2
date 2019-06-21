@@ -4,12 +4,23 @@
     
     <title>@yield('title')</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.min.css') }}">
+   <!--  <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap-grid.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap-grid.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap-reboot.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap-reboot.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap-reboot.css') }}"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     
 
 </head>
