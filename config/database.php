@@ -13,9 +13,14 @@ return [
     | to use as your default connection for all database work. Of course
     | you may use many connections at once using the Database library.
     |
-    */
+    */$url = parse_url(getenv("DATABASE_URL"));
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+            $host = $url["host"];
+            $username = $url["user"];
+            $password = $url["pass"];
+            $database = substr($url["path"], 1);
+
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
