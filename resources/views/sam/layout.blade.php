@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap-reboot.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap-reboot.css') }}"> -->
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -27,7 +27,8 @@
 <body>
 	<div class="container">
 
-         <div class="topnav">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+       
 
 	    	<a href="/">Home</a>
 	        <a href="/register">Register</a>
@@ -36,9 +37,10 @@
             <a href="/view">View Payment</a>
 
             @yield('search')
+     
+    </nav>
             
-        </div>
-
+   
     </div>
 
     @yield('content')
