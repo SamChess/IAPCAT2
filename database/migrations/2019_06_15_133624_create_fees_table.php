@@ -14,8 +14,7 @@ class CreateFeesTable extends Migration
     public function up()
     {
         Schema::create('fees', function (Blueprint $table) {
-             $table->unsignedBigInteger('student_number');
-
+            $table->unsignedBigInteger('student_number');
             $table->foreign('student_number')->references('student_number')->on('students');
             $table->string('payment_date');
             $table->bigInteger('amount');

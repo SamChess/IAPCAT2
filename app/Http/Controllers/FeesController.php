@@ -30,7 +30,7 @@ class FeesController extends Controller
 
 		DB::table('fees')->insert($data);
 
-		// echo "Fees paid successfully.<br/>";
+	
 		return redirect()->back()->with('message', 'Your Fees has been recorded successfully!');
 	}
      public function index() {

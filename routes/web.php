@@ -13,6 +13,7 @@
 use Illuminate\Support\Facades\Input;
 use App\fees;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -33,6 +34,7 @@ Route::get('/fees','FeesController@index');
  Route::get('/view/action','ViewController@action')->name('view.action');
 
 Route::get('/paid','PaidController@index');
+
 
 Route::post('/search',function(){
     $q = Input::get ( 'q' );

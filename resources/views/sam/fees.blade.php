@@ -8,7 +8,6 @@
 
 @section('search')
 
-<!-- <input type="text" placeholder="Search.."> -->
 
 
 @endsection
