@@ -26,21 +26,27 @@
 </head>
 <body>
 	<div class="container">
+         <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a href="#" class="navbar-brand">IAP CAT 2</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-       
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="/register" class="nav-item nav-link">Register</a>
+                    <a href="/fees" class="nav-item nav-link">Fees</a>
+                    <a href="/paid" class="nav-item nav-link">Total Paid</a>
+                    <a href="/view" class="nav-item nav-link">View Payment</a>
+                </div>
+               
+            </div>
+        </nav>
 
-	    	<a href="/">Home</a>
-	        <a href="/register">Register</a>
-	        <a href="/fees">Fees</a>
-            <a href="/paid">Total Paid</a>
-            <a href="/view">View Payment</a>
 
             @yield('search')
-     
-    </nav>
             
-   
     </div>
 
     @yield('content')
